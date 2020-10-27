@@ -18,7 +18,7 @@ import models.Role;
  */
 public class RoleDB {
     public List<Role> getAll(String owner) throws Exception {
-        List<Role> role = new ArrayList<>();
+        List<Role> roles = new ArrayList<>();
         ConnectionPool cp = ConnectionPool.getInstance();
         Connection con = cp.getConnection();
         PreparedStatement ps = null;
@@ -31,7 +31,11 @@ public class RoleDB {
             ps.setString(1, owner);
             rs = ps.executeQuery();
             while (rs.next()) {
-              //do something when Role.java is completed
+               int noteId = rs.getInt(1);
+                String name = rs.getString(2);
+               
+                Role role = new Role(noteId, name);
+                roles.add(role);
             }
         } finally {
            DBUtil.closeResultSet(rs);  
@@ -39,6 +43,6 @@ public class RoleDB {
             cp.freeConnection(con);
         }
 
-        return role;
+        return roles;
 }
 }
