@@ -17,13 +17,13 @@
         <div class="row">
             <div class="column left" style="background-color:#aaa;">
                 <h2>Add User</h2>
-                <form action="user">
+                <form action="User">
                     <input type="text" name="email" value="Email"><br>
                     <input type="text" name="fname" value="First Name"><br>
                     <input type="text" name="lname" value="Last Name"><br>
                     <input type="text" name="password" value="Password"><br>
                     <input type="text" name="role" value="Role"><br>
-                    <input type="submit" value="Submit">
+                    <input style="background-color:blue;" type="submit" value="Submit">
                 </form>
             </div>
             <div class="column middle" style="background-color:#bbb;">
@@ -45,12 +45,12 @@
                             <td name="role">${role}</td>
                             <td>
                                 <form name="edit" action="" >
-                                    <input id="email" type="submit" name="edit" value="Edit">
+                                    <input style="background-color:blue;" id="email" type="submit" name="edit" value="Edit">
                                 </form>
                             </td>
                             <td>
                                 <form name="edit" action="" >
-                                    <input id="email" type="submit" name="delete" value="Delete">
+                                    <input style="background-color:tomato;" id="email" type="submit" name="delete" value="Delete">
                                 </form>
                             </td>
 
@@ -66,8 +66,8 @@
                     <input type="text" name="lname" value="${lname}"><br>
                     <input type="text" name="password" value="${password}"><br>
                     <input type="text" name="role" value="${role}"><br>
-                    <input type="submit" name="save" value="Save Changes">
-                    <input type="submit" name="cancel" value="Cancel Changes">
+                    <input style="background-color:blue;" type="submit" name="save" value="Save Changes">
+                    <input style="background-color:tomato;" type="submit" name="cancel" value="Cancel Changes">
                 </form>
             </div>
         </div>
