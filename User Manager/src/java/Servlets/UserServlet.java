@@ -31,10 +31,6 @@ public class UserServlet extends HttpServlet {
     }
 
 
- * @author 818736
- */
-public class UserServlet extends HttpServlet {
-
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
