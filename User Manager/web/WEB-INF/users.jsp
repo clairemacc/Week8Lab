@@ -43,6 +43,7 @@
                             <td name="fname">${fname}</td>
                             <td name="lname">${lname}</td>
                             <td name="role">${role}</td>
+                            <td name="active">${active}</td>
                             <td>
                                 <form name="edit" action="" >
                                     <input style="background-color:blue;" id="email" type="submit" name="edit" value="Edit">
