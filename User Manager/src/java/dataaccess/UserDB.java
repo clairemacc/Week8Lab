@@ -15,23 +15,25 @@ import models.User;
  * @author 819466
  */
 public class UserDB {
-      
-    public List<User> getAll(String email) throws Exception
-    {
+
+    public List<User> getAll(String email) throws Exception {
         List<User> users = new ArrayList<>();
         ConnectionPool cp = ConnectionPool.getInstance();
         Connection con = cp.getConnection();
         PreparedStatement ps = null;
         ResultSet rs = null;
         String sql = "SELECT * from user where email=?";
-        try{
+        try {
             ps = con.prepareStatement(sql);
             ps.setString(1, email);
             rs = ps.executeQuery();
-            while(rs.next())
-            {
-               
+            while (rs.next()) {
+
             }
+        } catch (Exception e) {
+            e.printStackTrace();
         }
+
+        return users;
     }
 }
