@@ -18,7 +18,6 @@ import javax.servlet.http.HttpServletResponse;
  */
 public class UserServlet extends HttpServlet {
 
-
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -29,7 +28,4 @@ public class UserServlet extends HttpServlet {
             throws ServletException, IOException {
 
     }
-
-
-
 }
