@@ -15,6 +15,22 @@ import javax.servlet.http.HttpServletResponse;
 /**
  *
  * @author redma
+ */
+public class UserServlet extends HttpServlet {
+
+
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+    }
+
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+
+    }
+
+
  * @author 818736
  */
 public class UserServlet extends HttpServlet {
