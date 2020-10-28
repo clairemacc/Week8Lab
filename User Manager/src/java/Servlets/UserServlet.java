@@ -16,11 +16,11 @@ public class UserServlet extends HttpServlet {
         //RoleService roleService = new RoleService();
         UserService userService = new UserService();
 
-        String email = null;
+        //String email = null;
         //String action = request.getParameter("action");
 
         try {
-            email = request.getParameter("email");
+            //email = request.getParameter("email");
 
             List<User> users = userService.getAll();
             //List<Role> role = roleService.getAll();
