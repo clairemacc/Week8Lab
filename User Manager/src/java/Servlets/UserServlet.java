@@ -13,20 +13,20 @@ public class UserServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        RoleService roleService = new RoleService();
+        //RoleService roleService = new RoleService();
         UserService userService = new UserService();
 
         String email = null;
-        String action = request.getParameter("action");
+        //String action = request.getParameter("action");
 
         try {
             email = request.getParameter("email");
 
             List<User> user = userService.getAll();
-            List<Role> role = roleService.getAll();
+            //List<Role> role = roleService.getAll();
 
             request.setAttribute("user", user);
-            request.setAttribute("role", role);
+           // request.setAttribute("role", role);
         } catch (Exception e) {
             request.setAttribute("message", "error has occur");
         }
@@ -39,14 +39,14 @@ public class UserServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         String email = request.getParameter("email");
-        String firstName = request.getParameter("firstname");
-        String lastName = request.getParameter("lastname");
+        String firstName = request.getParameter("fname");
+        String lastName = request.getParameter("lname");
         String password = request.getParameter("password");
         String role = request.getParameter("role");
         Boolean active = true;
         String action = request.getParameter("action");
 
-        RoleService roleService = new RoleService();
+        //RoleService roleService = new RoleService();
         UserService userService = new UserService();
 
         try {
