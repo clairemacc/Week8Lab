@@ -1,9 +1,3 @@
-<%-- 
-    Document   : users
-    Created on : Oct 27, 2020, 10:17:56 AM
-    Author     : 819466
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -18,11 +12,11 @@
             <div class="column left" style="background-color:#aaa;">
                 <h2>Add User</h2>
                 <form action="create">
-                    <input type="text" name="email" value="Email"><br>
-                    <input type="text" name="fname" value="First Name"><br>
-                    <input type="text" name="lname" value="Last Name"><br>
-                    <input type="text" name="password" value="Password"><br>
-                    <input type="text" name="role" value="Role"><br>
+                    <input type="text" name="email" value="${user.email}" placeholder="Email"><br>
+                    <input type="text" name="fname" value="${user.firstName}" placeholder="First Name"><br>
+                    <input type="text" name="lname" value="${user.lastName}" placeholder="Last Name"><br>
+                    <input type="text" name="password" value="${user.password}" placeholder="Password"><br>
+                    <input type="text" name="role" value="${user.role}" placeholder="Role"><br>
                     <input style="background-color:blue;" type="submit" value="Submit">
                 </form>
             </div>
