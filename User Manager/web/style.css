@@ -12,32 +12,20 @@ body {
     background-color: #888;
 }
 
- 
-
-/* Create three unequal columns that floats next to each other */
 .column {
   float: left;
   padding: 10px;
 }
-
- 
-
 .left {
   width: 15%  
 } 
 .right {
   width: 20%;
 }
-
- 
-
 .middle {
   width: 60%;
 }
 
- 
-
-/* Clear floats after the columns */
 .row:after {
   content: "";
   display: table;
@@ -45,31 +33,32 @@ body {
 }
 
  
-
-.userTable {
+table {
     text-align: center;
+    border: 1px solid white;
 }
-
- 
 
 .blueButton {
     background-color: #008CBA;
     border: none;
     color: white;
-    padding: 15px 15px;
     text-align: center;
     display: inline-block;
-    font-size: 12px;
 }
-
- 
-
 .redButton {
     background-color: #f44336;
     border: none;
     color: white;
-    padding: 15px 15px;
     text-align: center;
     display: inline-block;
+}
+
+.tableButton {
+    height: 12px;
+    padding: 8px 8px;
+    font-size: 9px;
+}
+.bigButton {
+    padding: 15px 15px;
     font-size: 12px;
 }
