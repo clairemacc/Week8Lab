@@ -4,26 +4,22 @@ import java.io.Serializable;
 
 public class Role implements Serializable {
 
-    private String id;
+    private int id;
     private String name;
 
     public Role() {
     }
 
-    public Role(String id, String name) {
+    public Role(int id, String name) {
         this.id = id;
         this.name = name;
     }
 
-    public Role(int id, String name) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 
