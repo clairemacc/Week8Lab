@@ -11,7 +11,7 @@ public class UserDB {
         return null;
     }
 
-    public List<User> getAll(String email) throws Exception {
+    public List<User> getAll() throws Exception {
         List<User> users = new ArrayList<>();
         ConnectionPool cp = ConnectionPool.getInstance();
         Connection con = cp.getConnection();
@@ -20,7 +20,7 @@ public class UserDB {
         String sql = "SELECT * from user where email=?";
         try {
             ps = con.prepareStatement(sql);
-            ps.setString(1, email);
+            //ps.setString(1, email);
             rs = ps.executeQuery();
             while (rs.next()) {
 

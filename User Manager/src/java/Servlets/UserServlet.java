@@ -22,7 +22,7 @@ public class UserServlet extends HttpServlet {
         try {
             email = request.getParameter("email");
 
-            List<User> user = userService.getAll(email);
+            List<User> user = userService.getAll();
             List<Role> role = roleService.getAll();
 
             request.setAttribute("user", user);
@@ -77,7 +77,7 @@ public class UserServlet extends HttpServlet {
         }
 
         try {
-            List<User> user = userService.getAll(email);
+            List<User> user = userService.getAll();
             //List<Role> role = roleService.getAll(email);
         } catch (Exception e) {
             request.setAttribute("message", "error has occur");
