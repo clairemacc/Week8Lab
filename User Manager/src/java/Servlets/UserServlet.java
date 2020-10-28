@@ -25,7 +25,7 @@ public class UserServlet extends HttpServlet {
             List<User> users = userService.getAll();
             //List<Role> role = roleService.getAll();
 
-            request.setAttribute("user", users);
+            request.setAttribute("users", users);
            // request.setAttribute("role", role);
         } catch (Exception e) {
             request.setAttribute("message", "error has occur");
@@ -71,7 +71,7 @@ public class UserServlet extends HttpServlet {
                     break;
                 case "edit":
                     List<User> users = userService.getAll();
-                    request.setAttribute("user", users);
+                    request.setAttribute("users", users);
                     break;
             }
 
