@@ -26,7 +26,7 @@ public class UserDB {
                 String role = rs.getString(6);
                 user = new User(userEmail, active, firstName, lastName, password, role);
             }
-        }finally {
+        } finally {
             DBUtil.closeResultSet(rs);
             DBUtil.closePreparedStatement(ps);
             cp.freeConnection(con);
@@ -44,7 +44,7 @@ public class UserDB {
         String sql = "SELECT * from user";
         try {
             ps = con.prepareStatement(sql);
-          //ps.setString(1, email);
+            //ps.setString(1, email);
             rs = ps.executeQuery();
             while (rs.next()) {
                 String userEmail = rs.getString(1);
@@ -70,8 +70,8 @@ public class UserDB {
         Connection con = cp.getConnection();
         PreparedStatement ps = null;
         String sql = "insert into user (email, active, first_name, last_name, password, role) values (?, ?, ?, ?, ?, ?)";
-        try{
-            ps=con.prepareStatement(sql);
+        try {
+            ps = con.prepareStatement(sql);
             ps.setString(1, user.getEmail());
             ps.setBoolean(2, user.isActive());
             ps.setString(3, user.getFirstname());
@@ -90,7 +90,7 @@ public class UserDB {
         Connection con = cp.getConnection();
         PreparedStatement ps = null;
         String sql = "update user set active=?, first_name=?, last_name=?, password=?, role=? where email=?";
-        try{
+        try {
             ps = con.prepareStatement(sql);
             ps.setBoolean(1, user.isActive());
             ps.setString(2, user.getFirstname());
@@ -108,8 +108,8 @@ public class UserDB {
         Connection con = cp.getConnection();
         PreparedStatement ps = null;
         String sql = "delete from user where email=?";
-        try{
-            ps=con.prepareStatement(sql);
+        try {
+            ps = con.prepareStatement(sql);
             ps.setString(1, user.getEmail());
             ps.executeUpdate();
         } finally {
