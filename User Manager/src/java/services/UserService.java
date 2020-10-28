@@ -9,7 +9,7 @@ public class UserService {
     public User get(String email) throws Exception {
         UserDB userDB = new UserDB();
         User user = userDB.get(email);
-        return null;
+        return user;
     }
 
     public List<User> getAll(String email) throws Exception {
