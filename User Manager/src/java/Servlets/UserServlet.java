@@ -69,6 +69,10 @@ public class UserServlet extends HttpServlet {
                     userService.delete(email, active, firstName, lastName, password, role);
                     //roleService.delete(email, role);
                     break;
+                case "edit":
+                    List<User> user = userService.getAll();
+                    request.setAttribute("user", user);
+                    break;
             }
 
             request.setAttribute("message", action);
@@ -76,11 +80,5 @@ public class UserServlet extends HttpServlet {
             request.setAttribute("message", "error has occur");
         }
 
-        try {
-            List<User> user = userService.getAll();
-            //List<Role> role = roleService.getAll(email);
-        } catch (Exception e) {
-            request.setAttribute("message", "error has occur");
-        }
     }
 }
