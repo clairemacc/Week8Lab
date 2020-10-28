@@ -9,12 +9,12 @@ public class UserService {
     public User get(String email) throws Exception {
         UserDB userDB = new UserDB();
         User user = userDB.get(email);
-        return null;
+        return user;
     }
 
-    public List<User> getAll(String email) throws Exception {
+    public List<User> getAll() throws Exception {
         UserDB userDB = new UserDB();
-        List<User> users = userDB.getAll(email);
+        List<User> users = userDB.getAll();
         return users;
     }
 
