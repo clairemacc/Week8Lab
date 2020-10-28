@@ -23,7 +23,7 @@ public class UserServlet extends HttpServlet {
             email = request.getParameter("email");
 
             List<User> user = userService.getAll(email);
-            List<Role> role = roleService.getAll(email);
+            List<Role> role = roleService.getAll();
 
             request.setAttribute("user", user);
             request.setAttribute("role", role);

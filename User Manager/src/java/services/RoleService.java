@@ -6,9 +6,9 @@ import models.Role;
 
 public class RoleService {
 
-    public List<Role> getAll(String owner) throws Exception {
+    public List<Role> getAll() throws Exception {
         RoleDB roleDB = new RoleDB();
-        List<Role> roles = roleDB.getAll(owner);
+        List<Role> roles = roleDB.getAll();
         return roles;
     }
 }
