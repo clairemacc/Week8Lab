@@ -35,25 +35,27 @@
                         <th>Edit User</th>
                         <th>Delete User</th>
                     </tr>
-                    <c:forEach items="${firstName}" var="item">
+                    <c:forEach items="${users}" var="item">
                         <tr>
-                            <td name="email">${email}</td>
-                            <td name="fname">${firstName}</td>
-                            <td name="lname">${lastName}</td>
-                            <td name="role">${role}</td>
+                            <td name="email">${item.email}</td>
+                            <td name="fname">${item.firstname}</td>
+                            <td name="lname">${item.lastname}</td>
+                            <td name="role">${item.role}</td>
                             <td name="active">${active}</td>
                             <td>
                                 <form method="post" name="edit" action="User" >
-                                    <input class="blueButton" id="email" type="submit" name="edit" value="Edit">
+                                    <input style="background-color:blue;" id="email" type="submit" name="edit" value="Edit">
                                     <input type="hidden" name="action" value="edit">
                                 </form>
                             </td>
                             <td>
                                 <form method="post" name="edit" action="User" >
-                                    <input class="redButton" id="email" type="submit" name="delete" value="Delete">
+                                    <input style="background-color:tomato;" id="email" type="submit" name="delete" value="Delete">
                                     <input type="hidden" name="action" value="edit">
+                                </form>
                             </td>
                         </tr>
+                        
                     </c:forEach>
                 </table>
             </div>
@@ -61,8 +63,8 @@
                 <h2>Edit User</h2>
                 <form action="update">
                     <input type="text" name="email" value="${user.email}"><br>
-                    <input type="text" name="fname" value="${user.firstName}"><br>
-                    <input type="text" name="lname" value="${user.lastName}"><br>
+                    <input type="text" name="fname" value="${user.firstname}"><br>
+                    <input type="text" name="lname" value="${user.lastname}"><br>
                     <input type="text" name="password" value="${user.password}"><br>
                     <input type="text" name="role" value="${user.role}"><br>
                     <input type="radio" id="activeTrue" name="active" value="true">
