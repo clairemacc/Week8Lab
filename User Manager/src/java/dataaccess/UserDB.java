@@ -44,6 +44,7 @@ public class UserDB {
         String sql = "SELECT * from user";
         try {
             ps = con.prepareStatement(sql);
+          //ps.setString(1, email);
             rs = ps.executeQuery();
             while (rs.next()) {
                 String userEmail = rs.getString(1);
