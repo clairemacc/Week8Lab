@@ -17,7 +17,7 @@
         <div class="row">
             <div class="column left" style="background-color:#aaa;">
                 <h2>Add User</h2>
-                <form action="User">
+                <form action="create">
                     <input type="text" name="email" value="Email"><br>
                     <input type="text" name="fname" value="First Name"><br>
                     <input type="text" name="lname" value="Last Name"><br>
@@ -37,36 +37,35 @@
                         <th>Edit User</th>
                         <th>Delete User</th>
                     </tr>
-                    <c:forEach items="${fnames}" var="item">
+                    <c:forEach items="${user.firstName}" var="item">
                         <tr>
-                            <td name="email">${email}</td>
-                            <td name="fname">${fname}</td>
-                            <td name="lname">${lname}</td>
-                            <td name="role">${role}</td>
-                            <td name="active">${active}</td>
+                            <td name="email">${user.email}</td>
+                            <td name="fname">${user.firstName}</td>
+                            <td name="lname">${user.lastName}</td>
+                            <td name="role">${user.role}</td>
+                            <td name="active">${user.active}</td>
                             <td>
-                                <form name="edit" action="" >
+                                <form name="edit" action="edit" >
                                     <input style="background-color:blue;" id="email" type="submit" name="edit" value="Edit">
                                 </form>
                             </td>
                             <td>
-                                <form name="edit" action="" >
+                                <form name="edit" action="delete" >
                                     <input style="background-color:tomato;" id="email" type="submit" name="delete" value="Delete">
                                 </form>
                             </td>
-
                         </tr>
                     </c:forEach> 
                 </table>
             </div>
             <div class="column right" style="background-color:#ccc;">
                 <h2>Edit User</h2>
-                <form action="user">
-                    <input type="text" name="email" value="${email}"><br>
-                    <input type="text" name="fname" value="${fname}"><br>
-                    <input type="text" name="lname" value="${lname}"><br>
-                    <input type="text" name="password" value="${password}"><br>
-                    <input type="text" name="role" value="${role}"><br>
+                <form action="update">
+                    <input type="text" name="email" value="${user.email}"><br>
+                    <input type="text" name="fname" value="${user.firstName}"><br>
+                    <input type="text" name="lname" value="${user.lastName}"><br>
+                    <input type="text" name="password" value="${user.password}"><br>
+                    <input type="text" name="role" value="${user.role}"><br>
                     <input style="background-color:blue;" type="submit" name="save" value="Save Changes">
                     <input style="background-color:tomato;" type="submit" name="cancel" value="Cancel Changes">
                 </form>
