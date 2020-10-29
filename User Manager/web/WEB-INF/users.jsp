@@ -14,19 +14,18 @@
             <div class="column left" style="background-color:#aaa;">
                 <h2>Add User</h2>
                 <form action="create">
-                   
                     <input type="text" name="email" placeholder="Email"><br>
                     <input type="text" name="fname" placeholder="First Name"><br>
                     <input type="text" name="lname" placeholder="Last Name"><br>
                     <input type="text" name="password" placeholder="Password"><br>
                     <input type="text" name="role" placeholder="Role"><br><br>
-                    <input class="blueButton" type="submit" value="Submit">
+                    <input class="blueButton bigButton" type="submit" value="Add User">
                    
                 </form>
             </div>
-            <div class="column middle" style="background-color:#bbb;">
+            <div class="column middle">
                 <h2>Manage Users</h2>
-                <table style="width:100%" id="userTable">
+                <table class="userTable" style="width:100%">
                     <tr>
                         <th>Email Address</th>
                         <th>First Name</th>
@@ -41,16 +40,15 @@
                             <td name="fname">${item.firstname}</td>
                             <td name="lname">${item.lastname}</td>
                             <td name="role">${item.role}</td>
-                            <td name="active">${active}</td>
                             <td>
                                 <form method="post" name="edit" action="User" >
-                                    <input style="background-color:blue;" id="email" type="submit" name="edit" value="Edit">
+                                    <input class="blueButton tableButton" id="email" type="submit" name="edit" value="Edit">
                                     <input type="hidden" name="action" value="edit">
                                 </form>
                             </td>
                             <td>
                                 <form method="post" name="edit" action="User" >
-                                    <input style="background-color:tomato;" id="email" type="submit" name="delete" value="Delete">
+                                    <input class="redButton tableButton" id="email" type="submit" name="delete" value="Delete">
                                     <input type="hidden" name="action" value="edit">
                                 </form>
                             </td>
@@ -71,8 +69,8 @@
                     <label for="activeTrue">Active</label>
                     <input type="radio" name="active" value="false">
                     <label for="activeFalse">Not Active</label><br>
-                    <input class="blueButton" type="submit" name="save" value="Save Changes">
-                    <input class="redButton" type="submit" name="cancel" value="Cancel Changes">
+                    <input class="blueButton bigButton" type="submit" name="save" value="Save Changes">
+                    <input class="redButton bigButton" type="submit" name="cancel" value="Cancel Changes">
                 </form>
             </div>
         </div>
