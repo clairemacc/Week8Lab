@@ -11,7 +11,7 @@
     <body>
         <h1>User Manager</h1>
         <div class="row">
-            <div class="column left" style="background-color:#aaa;">
+            <div class="column left">
                 <h2>Add User</h2>
                 <form action="create">
                     <input type="text" name="email" placeholder="Email"><br>
@@ -25,7 +25,7 @@
             </div>
             <div class="column middle">
                 <h2>Manage Users</h2>
-                <table class="userTable" style="width:100%">
+                <table class="userTable">
                     <tr>
                         <th>Email Address</th>
                         <th>First Name</th>
@@ -57,20 +57,32 @@
                     </c:forEach>
                 </table>
             </div>
-            <div class="column right" style="background-color:#ccc;">
+            <div class="column right">
                 <h2>Edit User</h2>
                 <form action="update">
-                    <input type="text" name="email" value="${user.email}"><br>
-                    <input type="text" name="fname" value="${user.firstname}"><br>
-                    <input type="text" name="lname" value="${user.lastname}"><br>
-                    <input type="text" name="password" value="${user.password}"><br>
-                    <input type="text" name="role" value="${user.role}"><br>
-                    <input type="radio" id="activeTrue" name="active" value="true">
+                    <label for="email">Email: </label>
+                    <input type="text" id="email" name="email" value="${user.email}">
+                    <br><br>
+                    <label for="firstname">First Name: </label>
+                    <input type="text" id="fname" name="firstname" value="${user.firstname}">
+                    <br><br>
+                    <label for="lastname">Last Name: </label>
+                    <input type="text" id="lastname" name="lastname" value="${user.lastname}">
+                    <br><br>
+                    <label for="password">Password: </label>
+                    <input type="text" id="password" name="password" value="${user.password}">
+                    <br><br>
+                    <label for="role">Role: </label>
+                    <input type="text" id="role" name="role" value="${user.role}">
+                    <br><br>
                     <label for="activeTrue">Active</label>
-                    <input type="radio" name="active" value="false">
-                    <label for="activeFalse">Not Active</label><br>
-                    <input class="blueButton bigButton" type="submit" name="save" value="Save Changes">
-                    <input class="redButton bigButton" type="submit" name="cancel" value="Cancel Changes">
+                    <input type="radio" id="activeTrue" name="active" value="true">
+                    
+                    <label for="activeFalse">Not Active</label>
+                    <input type="radio" id="activeFalse" name="active" value="false">
+                    <br><br>
+                    <input class="blueButton bigButton inputButton" type="submit" name="save" value="Save Changes">
+                    <input class="redButton bigButton inputButton" type="submit" name="cancel" value="Cancel Changes">
                 </form>
             </div>
         </div>
