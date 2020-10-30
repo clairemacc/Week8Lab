@@ -66,26 +66,21 @@
             <div class="column right">
                 <h2>Edit User</h2>
                 <form action="user" method="post">
-                    <label for="email">Email: </label>
-                    <input type="text" id="email" name="email" value="${user.email}">
+                    <input type="text" id="email" name="email" value="${user.email}" placeholder="Email">
                     <br><br>
-                    <label for="firstname">First Name: </label>
-                    <input type="text" id="fname" name="firstname" value="${user.firstname}">
+                    <input type="text" id="fname" name="firstname" value="${user.firstname}" placeholder="First Name">
                     <br><br>
-                    <label for="lastname">Last Name: </label>
-                    <input type="text" id="lastname" name="lastname" value="${user.lastname}">
+                    <input type="text" id="lastname" name="lastname" value="${user.lastname}" placeholder="Last Name">
                     <br><br>
-                    <label for="password">Password: </label>
-                    <input type="text" id="password" name="password" value="${user.password}">
+                    <input type="text" id="password" name="password" value="${user.password}" placeholder="Password">
                     <br><br>
-                    <label for="role">Role: </label>
-                    <input type="text" id="role" name="role" value="${user.role}">
+                    <input type="text" id="role" name="role" value="${user.role}" placeholder="Role">
                     <br><br>
-                    <label for="activeTrue">Active</label>
                     <input type="radio" id="activeTrue" name="active" value="true">
-
-                    <label for="activeFalse">Not Active</label>
+                    <label for="activeTrue">Active</label>
+                    <br>
                     <input type="radio" id="activeFalse" name="active" value="false">
+                    <label for="activeFalse">Not Active</label>
                     <br><br>
                     <input class="blueButton bigButton inputButton" style="width: 49%;" type="submit" name="save" value="Save Changes">
                     <input class="redButton bigButton inputButton" style="width: 49%;" type="reset" name="cancel" value="Cancel Changes">

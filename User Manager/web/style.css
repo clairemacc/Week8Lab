@@ -18,6 +18,7 @@ input[type=text] {
     border-bottom: 2px solid #1c244c;
     width: 100%;
     padding: 10px 5px;
+    color: #FFF;
 }
 
 ::placeholder {
