@@ -1,36 +1,37 @@
-/* 
-    Created on : Oct 27, 2020, 11:01:09 AM
-    Author     : 819466
-*/
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+    color: #FFF;
 }
 
 body {
-    background-color: #888;
+    background: linear-gradient(#2d3790, #1d214b) no-repeat center fixed; 
 }
 
 .column {
-  float: left;
-  padding: 10px;
+    float: left;
+    padding: 10px;
 }
 .left {
-  width: 15%  
+    width: 15%;
+    background-color: #33408e;
 } 
 .right {
-  width: 20%;
+    width: 20%;
+    background-color: #33408e;
 }
 .middle {
-  width: 60%;
+    width: 60%;
+    background-color: #33408e;
 }
 
 .row:after {
-  content: "";
-  display: table;
-  clear: both;
+    content: "";
+    display: table;
+    clear: both;
 }
 
- 
+
 table {
     text-align: center;
     border: 1px solid white;

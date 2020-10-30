@@ -6,6 +6,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" type="text/css" href="style.css"/>
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet"> 
         <title>User Manager</title>
     </head>
     <body>
@@ -20,7 +21,7 @@
                     <input type="text" name="password" placeholder="Password"><br>
                     <input type="text" name="role" placeholder="Role"><br><br>
                     <input class="blueButton bigButton" type="submit" value="Add User">
-                   
+
                 </form>
             </div>
             <div class="column middle">
@@ -53,7 +54,7 @@
                                 </form>
                             </td>
                         </tr>
-                        
+
                     </c:forEach>
                 </table>
             </div>
@@ -77,7 +78,7 @@
                     <br><br>
                     <label for="activeTrue">Active</label>
                     <input type="radio" id="activeTrue" name="active" value="true">
-                    
+
                     <label for="activeFalse">Not Active</label>
                     <input type="radio" id="activeFalse" name="active" value="false">
                     <br><br>
