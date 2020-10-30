@@ -38,23 +38,17 @@
                         <th>Last Name</th>
                         <th>Role</th>
                         <th>Edit User</th>
-                        <th>Delete User</th>
                     </tr>
                     <c:forEach items="${users}" var="item">
                         <tr>
+                             <form method="post" name="edit" action="User" >
                             <td name="email">${item.email}</td>
                             <td name="fname">${item.firstname}</td>
                             <td name="lname">${item.lastname}</td>
                             <td name="role">${item.role}</td>
                             <td>
-                                <form method="post" name="edit" action="User" >
+                              
                                     <input class="blueButton tableButton" style="width: 100%;" id="email" type="submit" name="edit" value="Edit">
-                                    <input type="hidden" name="action" value="edit">
-                                </form>
-                            </td>
-                            <td>
-                                <form method="post" name="edit" action="User" >
-                                    <input class="redButton tableButton" style="width: 100%;" id="email" type="submit" name="delete" value="Delete">
                                     <input type="hidden" name="action" value="edit">
                                 </form>
                             </td>
@@ -66,15 +60,15 @@
             <div class="column right">
                 <h2>Edit User</h2>
                 <form action="User" method="post">
-                    <input type="text" id="email" name="email" value="${user.email}" placeholder="Email">
+                    <input type="text" id="email" name="updateEmail" value="${user.email}" placeholder="Email">
                     <br><br>
-                    <input type="text" id="fname" name="firstname" value="${user.firstname}" placeholder="First Name">
+                    <input type="text" id="fname" name="updateFname" value="${user.firstname}" placeholder="First Name">
                     <br><br>
-                    <input type="text" id="lastname" name="lastname" value="${user.lastname}" placeholder="Last Name">
+                    <input type="text" id="lastname" name="updateLname" value="${user.lastname}" placeholder="Last Name">
                     <br><br>
-                    <input type="text" id="password" name="password" value="${user.password}" placeholder="Password">
+                    <input type="text" id="password" name="updatePassword" value="${user.password}" placeholder="Password">
                     <br><br>
-                    <input type="text" id="role" name="role" value="${user.role}" placeholder="Role">
+                    <input type="text" id="role" name="updateRole" value="${user.role}" placeholder="Role">
                     <br><br>
                     <input type="radio" id="activeTrue" name="active" value="true">
                     <label for="activeTrue">Active</label>

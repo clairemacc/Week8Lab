@@ -70,8 +70,16 @@ public class UserServlet extends HttpServlet {
                     //roleService.delete(email, role);
                     break;
                 case "edit":
+                    UserService userServices  = new UserService();
                     List<User> users = userService.getAll();
                     request.setAttribute("users", users);
+                    String editEmail = request.getParameter("edit");
+                    User user = userService.get(editEmail);
+                    request.setAttribute("updateEmail", user.getEmail());
+                    request.setAttribute("updateFname", user.getFirstname());
+                    request.setAttribute("updateLtname", user.getLastname());
+                    request.setAttribute("updatePassword", user.getEmail());
+                    request.setAttribute("updateRole", user.getRole());
                     break;
             }
 
