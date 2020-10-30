@@ -78,7 +78,6 @@
                     <br><br>
                     <input type="radio" id="activeTrue" name="active" value="true">
                     <label for="activeTrue">Active</label>
-                    <br>
                     <input type="radio" id="activeFalse" name="active" value="false">
                     <label for="activeFalse">Not Active</label>
                     <br><br>
