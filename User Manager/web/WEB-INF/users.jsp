@@ -14,7 +14,7 @@
         <div class="row">
             <div class="column left">
                 <h2>Add User</h2>
-                <form action="user" method="post">
+                <form action="User" method="post">
                     <input type="text" name="email" placeholder="Email">
                     <br><br>
                     <input type="text" name="fname" placeholder="First Name">
@@ -65,7 +65,7 @@
             </div>
             <div class="column right">
                 <h2>Edit User</h2>
-                <form action="user" method="post">
+                <form action="User" method="post">
                     <input type="text" id="email" name="email" value="${user.email}" placeholder="Email">
                     <br><br>
                     <input type="text" id="fname" name="firstname" value="${user.firstname}" placeholder="First Name">
