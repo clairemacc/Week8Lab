@@ -80,12 +80,21 @@ tr {
     text-align: center;
     display: inline-block;
 }
+
+.blueButton:hover {
+    background-color: #006f94;
+}
+
 .redButton {
     background-color: #f44336;
     border: none;
     color: white;
     text-align: center;
     display: inline-block;
+}
+
+.redButton:hover {
+    background-color: #b5261b;
 }
 
 .tableButton {
