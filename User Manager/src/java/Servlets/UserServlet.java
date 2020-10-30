@@ -79,6 +79,7 @@ public class UserServlet extends HttpServlet {
         } catch (Exception e) {
             request.setAttribute("message", "error has occur");
         }
-
+        getServletContext().getRequestDispatcher("/WEB-INF/users.jsp")
+                .forward(request, response);
     }
 }
