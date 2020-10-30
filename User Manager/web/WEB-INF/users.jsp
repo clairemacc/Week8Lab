@@ -14,7 +14,7 @@
         <div class="row">
             <div class="column left">
                 <h2>Add User</h2>
-                <form action="create" method="post">
+                <form action="user" method="post">
                     <input type="text" name="email" placeholder="Email">
                     <br><br>
                     <input type="text" name="fname" placeholder="First Name">
@@ -25,7 +25,7 @@
                     <br><br>
                     <input type="text" name="role" placeholder="Role">
                     <br><br>
-                    <input class="blueButton bigButton" type="submit" value="Add User">
+                    <input class="blueButton bigButton" style="width: 100%;" type="submit" value="Add User">
                     <input type="hidden" name="action" value="create">
                 </form>
             </div>
@@ -65,7 +65,7 @@
             </div>
             <div class="column right">
                 <h2>Edit User</h2>
-                <form action="update" method="post">
+                <form action="user" method="post">
                     <label for="email">Email: </label>
                     <input type="text" id="email" name="email" value="${user.email}">
                     <br><br>
@@ -87,8 +87,8 @@
                     <label for="activeFalse">Not Active</label>
                     <input type="radio" id="activeFalse" name="active" value="false">
                     <br><br>
-                    <input class="blueButton bigButton inputButton" type="submit" name="save" value="Save Changes">
-                    <input class="redButton bigButton inputButton" type="submit" name="cancel" value="Cancel Changes">
+                    <input class="blueButton bigButton inputButton" style="width: 49%;" type="submit" name="save" value="Save Changes">
+                    <input class="redButton bigButton inputButton" style="width: 49%;" type="reset" name="cancel" value="Cancel Changes">
                     <input type="hidden" name="action" value="udpate">
                 </form>
             </div>
