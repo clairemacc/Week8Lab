@@ -12,6 +12,17 @@ h1, h2 {
     color: #FFF;
 }
 
+input[type=text] {
+    border: none;
+    background: none;
+    border-bottom: 2px solid #1c244c;
+    width: 100%;
+}
+
+::placeholder {
+    color: #d8b5c4;
+}
+
 table {
     color: #FFF;
 }
