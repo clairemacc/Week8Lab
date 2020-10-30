@@ -38,12 +38,14 @@ label {
     padding: 10px;
 }
 .left {
-    width: 15%;
+    width: 20%;
     background-color: #33408e;
+    border-radius: 10px 0px 0px 10px;
 } 
 .right {
     width: 20%;
     background-color: #33408e;
+    border-radius: 0px 10px 10px 0px;
 }
 .middle {
     width: 60%;
@@ -58,9 +60,17 @@ label {
 
 table {
     text-align: center;
-    border: 1px solid white;
+    border: none;
     width: 100%;
     color: #FFF;
+}
+
+th {
+    background-color: #1c244c;
+}
+
+tr {
+    background-color: #283369;
 }
 
 .blueButton {

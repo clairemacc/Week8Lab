@@ -48,13 +48,13 @@
                             <td name="role">${item.role}</td>
                             <td>
                                 <form method="post" name="edit" action="User" >
-                                    <input class="blueButton tableButton" id="email" type="submit" name="edit" value="Edit">
+                                    <input class="blueButton tableButton" style="width: 100%;" id="email" type="submit" name="edit" value="Edit">
                                     <input type="hidden" name="action" value="edit">
                                 </form>
                             </td>
                             <td>
                                 <form method="post" name="edit" action="User" >
-                                    <input class="redButton tableButton" id="email" type="submit" name="delete" value="Delete">
+                                    <input class="redButton tableButton" style="width: 100%;" id="email" type="submit" name="delete" value="Delete">
                                     <input type="hidden" name="action" value="edit">
                                 </form>
                             </td>
