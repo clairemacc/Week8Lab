@@ -1,11 +1,23 @@
 * {
     box-sizing: border-box;
     font-family: 'Ubuntu', sans-serif;
-    color: #FFF;
 }
 
 body {
     background: linear-gradient(#2d3790, #1d214b) no-repeat center fixed; 
+}
+
+h1, h2 {
+    text-align: center;
+    color: #FFF;
+}
+
+table {
+    color: #FFF;
+}
+
+label {
+    color: #FFF;
 }
 
 .column {
@@ -30,7 +42,6 @@ body {
     display: table;
     clear: both;
 }
-
 
 table {
     text-align: center;
