@@ -48,15 +48,20 @@ public class UserServlet extends HttpServlet {
 
         //RoleService roleService = new RoleService();
         UserService userService = new UserService();
+        List<User> users = null;
 
         try {
             switch (action) {
                 case "create":
+                    users = userService.getAll();
+                    request.setAttribute("users", users);
                     userService.insert(email, active, firstName, lastName, password, role);
                     //roleService.insert(id, name);
 
                     break;
                 case "update":
+                    users = userService.getAll();
+                    request.setAttribute("users", users);
                     active = Boolean.parseBoolean(request.getParameter("active"));
 
                     userService.update(email, active, firstName, lastName, password, role);
@@ -64,14 +69,15 @@ public class UserServlet extends HttpServlet {
 
                     break;
                 case "delete":
+                    users = userService.getAll();
+                    request.setAttribute("users", users);
                     active = false;
 
                     userService.delete(email, active, firstName, lastName, password, role);
                     //roleService.delete(email, role);
                     break;
                 case "edit":
-                    UserService userServices  = new UserService();
-                    List<User> users = userService.getAll();
+                    users = userService.getAll();
                     request.setAttribute("users", users);
                     String editEmail = request.getParameter("edit");
                     User user = userService.get(editEmail);
