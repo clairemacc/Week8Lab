@@ -54,9 +54,6 @@ public class UserServlet extends HttpServlet {
                 case "create":
                     userService.insert(email, active, firstName, lastName, password, role);
                     //roleService.insert(id, name);
-                    
-                    List<User> users = userService.getAll();
-                    request.setAttribute("users", users);
 
                     break;
                 case "update":
@@ -73,7 +70,7 @@ public class UserServlet extends HttpServlet {
                     //roleService.delete(email, role);
                     break;
                 case "edit":
-                    users = userService.getAll();
+                    List<User> users = userService.getAll();
                     request.setAttribute("users", users);
                     break;
             }
