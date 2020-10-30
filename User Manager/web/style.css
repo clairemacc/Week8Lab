@@ -23,10 +23,6 @@ input[type=text] {
     color: #d8b5c4;
 }
 
-table {
-    color: #FFF;
-}
-
 label {
     color: #FFF;
 }
@@ -58,6 +54,7 @@ table {
     text-align: center;
     border: 1px solid white;
     width: 100%;
+    color: #FFF;
 }
 
 .blueButton {

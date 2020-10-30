@@ -15,11 +15,16 @@
             <div class="column left">
                 <h2>Add User</h2>
                 <form action="create" method="post">
-                    <input type="text" name="email" placeholder="Email"><br>
-                    <input type="text" name="fname" placeholder="First Name"><br>
-                    <input type="text" name="lname" placeholder="Last Name"><br>
-                    <input type="text" name="password" placeholder="Password"><br>
-                    <input type="text" name="role" placeholder="Role"><br><br>
+                    <input type="text" name="email" placeholder="Email">
+                    <br><br>
+                    <input type="text" name="fname" placeholder="First Name">
+                    <br><br>
+                    <input type="text" name="lname" placeholder="Last Name">
+                    <br><br>
+                    <input type="text" name="password" placeholder="Password">
+                    <br><br>
+                    <input type="text" name="role" placeholder="Role">
+                    <br><br>
                     <input class="blueButton bigButton" type="submit" value="Add User">
                     <input type="hidden" name="action" value="create">
                 </form>
