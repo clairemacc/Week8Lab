@@ -14,14 +14,14 @@
         <div class="row">
             <div class="column left">
                 <h2>Add User</h2>
-                <form action="create">
+                <form action="create" method="post">
                     <input type="text" name="email" placeholder="Email"><br>
                     <input type="text" name="fname" placeholder="First Name"><br>
                     <input type="text" name="lname" placeholder="Last Name"><br>
                     <input type="text" name="password" placeholder="Password"><br>
                     <input type="text" name="role" placeholder="Role"><br><br>
                     <input class="blueButton bigButton" type="submit" value="Add User">
-
+                    <input type="hidden" name="action" value="create">
                 </form>
             </div>
             <div class="column middle">
@@ -60,7 +60,7 @@
             </div>
             <div class="column right">
                 <h2>Edit User</h2>
-                <form action="update">
+                <form action="update" method="post">
                     <label for="email">Email: </label>
                     <input type="text" id="email" name="email" value="${user.email}">
                     <br><br>
@@ -84,6 +84,7 @@
                     <br><br>
                     <input class="blueButton bigButton inputButton" type="submit" name="save" value="Save Changes">
                     <input class="redButton bigButton inputButton" type="submit" name="cancel" value="Cancel Changes">
+                    <input type="hidden" name="action" value="udpate">
                 </form>
             </div>
         </div>
